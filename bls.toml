@@ -1,0 +1,16 @@
+name = "check-build-time"
+version = "1.0.0"
+
+[deployment]
+permission = "public"
+nodes = 1
+
+[build]
+dir = "build"
+entry = "check-build-time_debug.wasm"
+command = "npm run build:debug"
+
+[build_release]
+dir = "build"
+entry = "check-build-time.wasm"
+command = "npm run build:release"
